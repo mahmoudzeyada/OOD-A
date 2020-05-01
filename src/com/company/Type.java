@@ -1,7 +1,5 @@
 package com.company;
 
-import org.jetbrains.annotations.Contract;
-
 public enum Type {
     TYPE1, TYPE2;
 
