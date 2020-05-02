@@ -1,4 +1,4 @@
-package com.company;
+package GuitarExample;
 
 public class GuitarSpec {
     private String model;

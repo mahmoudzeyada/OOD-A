@@ -1,4 +1,5 @@
-import com.company.GuitarSpec;
+package GuitarExample;
+
 
 public class Guitar {
     private  String serialNumber;

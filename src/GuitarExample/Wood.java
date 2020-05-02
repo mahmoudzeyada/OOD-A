@@ -1,4 +1,4 @@
-package com.company;
+package GuitarExample;
 
 public enum Wood {
     Wood1, Wood2;

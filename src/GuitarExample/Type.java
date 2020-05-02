@@ -1,4 +1,4 @@
-package com.company;
+package GuitarExample;
 
 public enum Type {
     TYPE1, TYPE2;

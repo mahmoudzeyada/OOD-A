@@ -1,4 +1,4 @@
-import com.company.GuitarSpec;
+package GuitarExample;
 import java.util.LinkedList;
 
 public class Inventory {
