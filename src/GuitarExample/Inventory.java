@@ -2,32 +2,29 @@ package GuitarExample;
 import java.util.LinkedList;
 
 public class Inventory {
-    private LinkedList<Guitar> guitars = new LinkedList<Guitar>();
+    private LinkedList<Instrument> inventory = new LinkedList<Instrument>();
 
-    public void addGuitar(String serialNumber,double price,GuitarSpec guitarSpec) {
-        Guitar guitar = new Guitar(serialNumber, price, guitarSpec);
-        guitars.add(guitar);
+    public void addInstrument(String serialNumber, double price,InstrumentSpec spec) {
+        Instrument instrument = new Instrument(serialNumber, price, spec);
+        inventory.add(instrument);
     }
 
-    public Guitar getGuitar(String serialNumber) {
-        for (Guitar guitar : guitars) {
-            if (guitar.getSerialNumber().equals(serialNumber)) {
-                return guitar;
+    public Instrument get(String serialNumber) {
+        for (Instrument instrument : inventory) {
+            if (instrument.getSerialNumber().equals(serialNumber)) {
+                return instrument;
             }
         }
         return null;
     }
 
-    public LinkedList<Guitar> search(GuitarSpec searchGuitar) {
-        LinkedList<Guitar> foundGuitars = new LinkedList<Guitar>();
-        for (Guitar guitar : guitars) {
-            GuitarSpec guitarSpec = guitar.getGuitarSpec();
-            if (searchGuitar.match(guitarSpec)) {
-                foundGuitars.add(guitar);
+    public LinkedList<Instrument> search(InstrumentSpec spec) {
+        LinkedList<Instrument> foundInstruments = new LinkedList<Instrument>();
+        for (Instrument instrument : inventory) {
+            if (spec.match(instrument.getSpec())) {
+                foundInstruments.add(instrument);
             }
         }
-        return foundGuitars;
+        return foundInstruments;
     }
-
-
 }
